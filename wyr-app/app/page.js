@@ -65,10 +65,10 @@ export default function Home() {
     return (
 
 
-        <div className="p-12 bg-gradient-to-t from-[#FF4F2D] via-[#FF8B74] to-[#FF89FF] min-h-screen text-white flex
+        <div className="pt-24 bg-gradient-to-t from-[#FF4F2D] via-[#FF8B74] to-[#FF89FF] min-h-screen text-white flex
       flex-col items-center">
-            <h1 className="text-7xl font-bold ">Would You Rather</h1>
-            <div className={"flex flex-col items-center justify-center w-full flex-1 pb-36"}>
+            <h1 className="pb-12 text-7xl font-bold">Would You Rather</h1>
+            <div className={"flex flex-col items-center w-full flex-1 pb-36"}>
                 {!roundStarted && (
                     <>
                         <form onSubmit={addElement} className="mb-4 text-black">
@@ -76,18 +76,16 @@ export default function Home() {
                                 name="element"
                                 type="text"
                                 placeholder="Add Element..."
-                                className="p-2 mr-2 rounded-md text-xl"
+                                className="p-2 mr-2 rounded-md text-2xl shadow-2xl"
                                 required
                             />
-                            <button type="submit"
-                                    className="bg-blue-400 rounded-md text-xl text-white p-2 hover:bg-blue-500 mr-2 w-20">Add
+                            <button type="submit" className="bg-blue-400 shadow-2xl rounded-md text-2xl text-white p-2 hover:bg-blue-500 mr-2 w-20">Add
                             </button>
-                        </form>
-                        {elements.length > 1 && (
                             <button onClick={startGame}
-                                    className="bg-green-500 rounded-md text-white text-xl p-2 mb-4 hover:bg-green-600 w-48">Start
+                                    className="bg-green-500 rounded-md shadow-2xl text-white text-2xl p-2 mb-4 hover:bg-green-600 w-48">Start
                                 Round</button>
-                        )}
+                        </form>
+
                     </>
                 )}
 
